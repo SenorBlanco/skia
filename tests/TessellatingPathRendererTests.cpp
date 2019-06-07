@@ -673,31 +673,6 @@ static SkPath create_path_45() {
 // Reduction from crbug.com/969359.
 static SkPath create_path_46() {
     SkPath path;
-    path.moveTo(6.9558422323675385461e+36, 1.3035397155496029228e+38);
-    path.lineTo(7.6298216328944826413e+36, 1.206773049214916931e+38);
-    path.lineTo(9.5328763920594110033e+36, 8.0574072791948256965e+37);
-    path.lineTo(1.0009592879733039637e+37, 6.4730990802103048644e+37);
-    path.lineTo(-1.0009592879733039637e+37, -6.4730990802103048644e+37);
-    path.lineTo(-9.5328763920594110033e+36, -8.0574072791948256965e+37);
-    path.lineTo(-7.6298216328944826413e+36, -1.206773049214916931e+38);
-    path.lineTo(-6.9558422323675385461e+36, -1.3035397155496029228e+38);
-    path.lineTo(6.9558422323675385461e+36, 1.3035397155496029228e+38);
-    path.moveTo(-2.2677694041623170434e+36, -1.6636470020431730896e+38);
-    path.lineTo(-162.988372802734375, -1.7014117331926442991e+38);
-    path.lineTo(8.0022916058077426017e+36, -1.1456110374069132458e+38);
-    path.lineTo(8.2899931492584407478e+36, -1.0938915013898895957e+38);
-    path.lineTo(-8.2899931492584407478e+36, 1.0938915013898895957e+38);
-    path.lineTo(-8.0022916058077426017e+36, 1.1456110374069132458e+38);
-    path.lineTo(-162.988372802734375, 1.7014117331926442991e+38);
-    path.lineTo(2.2677694041623170434e+36, 1.6636470020431730896e+38);
-    path.lineTo(-2.2677694041623170434e+36, -1.6636470020431730896e+38);
-    path.moveTo(1.0690091173471657402e+37, 2.663369405296316363e+37);
-    path.lineTo(8.7182435515335434865e+36, 1.0082722501974665985e+38);
-    path.lineTo(6.4938146460240545208e+36, 1.3611648807709218297e+38);
-    path.lineTo(-6.4938146460240545208e+36, -1.3611648807709218297e+38);
-    path.lineTo(-8.7182435515335434865e+36, -1.0082722501974665985e+38);
-    path.lineTo(-1.0690091173471657402e+37, -2.663369405296316363e+37);
-    path.lineTo(1.0690091173471657402e+37, 2.663369405296316363e+37);
     path.moveTo(-3.8487979692051924061e+36, 1.5902073378177429205e+38);
     path.lineTo(-7.4483023066707016745e+36, 1.2344767924925447476e+38);
     path.lineTo(-1.0002297550528726177e+37, 6.5009032214154707568e+37);
@@ -705,25 +680,6 @@ static SkPath create_path_46() {
     path.lineTo(7.4483023066707016745e+36, -1.2344767924925447476e+38);
     path.lineTo(3.8487979692051924061e+36, -1.5902073378177429205e+38);
     path.lineTo(-3.8487979692051924061e+36, 1.5902073378177429205e+38);
-    path.moveTo(-1.0730249076836287481e+37, -2.2288971203451734287e+37);
-    path.lineTo(-9.8881722346407789117e+36, -6.9188912314913658416e+37);
-    path.lineTo(-9.0731590989348429262e+36, -9.2767441656266766365e+37);
-    path.lineTo(9.0731590989348429262e+36, 9.2767441656266766365e+37);
-    path.lineTo(9.8881722346407789117e+36, 6.9188912314913658416e+37);
-    path.lineTo(1.0730249076836287481e+37, 2.2288971203451734287e+37);
-    path.lineTo(-1.0730249076836287481e+37, -2.2288971203451734287e+37);
-    path.moveTo(-6.0761136320440511072e+36, -1.4080168413071651153e+38);
-    path.lineTo(-3.6194936028678581608e+36, -1.6034576331877125202e+38);
-    path.lineTo(-1.788445636502587742e+35, -1.7011793981906344692e+38);
-    path.lineTo(1.788445636502587742e+35, 1.7011793981906344692e+38);
-    path.lineTo(3.6194936028678581608e+36, 1.6034576331877125202e+38);
-    path.lineTo(6.0761136320440511072e+36, 1.4080168413071651153e+38);
-    path.lineTo(-6.0761136320440511072e+36, -1.4080168413071651153e+38);
-    path.moveTo(1.0823525343302281057e+37,           -146.03125);
-    path.lineTo(1.0823525343302281057e+37,           -143.03125);
-    path.lineTo(-1.0823525343302281057e+37,           -143.03125);
-    path.lineTo(-1.0823525343302281057e+37,           -146.03125);
-    path.lineTo(1.0823525343302281057e+37,           -146.03125);
     path.moveTo(1.0425214946728668754e+37, -4.5731834042267216669e+37);
     path.lineTo(1.0321827899075254821e+37, -5.1199920965387697886e+37);
     path.lineTo(7.4250776800239202837e+36, -1.2379291628432303167e+38);
@@ -808,7 +764,7 @@ static void test_path(GrContext* ctx,
                       AATypeFlags aaTypeFlags = AATypeFlags::kNone,
                       std::unique_ptr<GrFragmentProcessor> fp = nullptr) {
     GrTessellatingPathRenderer tess;
-    tess.setMaxVerbCount(1000);
+    tess.setMaxVerbCount(100);
 
     GrPaint paint;
     paint.setXPFactory(GrPorterDuffXPFactory::Get(SkBlendMode::kSrc));
@@ -849,6 +805,7 @@ DEF_GPUTEST_FOR_ALL_CONTEXTS(TessellatingPathRendererTests, reporter, ctxInfo) {
     // Adding discard to appease vulkan validation warning about loading uninitialized data on draw
     rtc->discard();
 
+if (false) {
     test_path(ctx, rtc.get(), create_path_0());
     test_path(ctx, rtc.get(), create_path_1());
     test_path(ctx, rtc.get(), create_path_2());
@@ -897,5 +854,6 @@ DEF_GPUTEST_FOR_ALL_CONTEXTS(TessellatingPathRendererTests, reporter, ctxInfo) {
     test_path(ctx, rtc.get(), create_path_43(), SkMatrix(), AATypeFlags::kCoverage);
     test_path(ctx, rtc.get(), create_path_44(), SkMatrix(), AATypeFlags::kCoverage);
     test_path(ctx, rtc.get(), create_path_45(), SkMatrix(), AATypeFlags::kCoverage);
+}
     test_path(ctx, rtc.get(), create_path_46(), SkMatrix(), AATypeFlags::kCoverage);
 }
