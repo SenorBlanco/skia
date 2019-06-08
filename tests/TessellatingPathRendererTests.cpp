@@ -746,7 +746,6 @@ DEF_GPUTEST_FOR_ALL_CONTEXTS(TessellatingPathRendererTests, reporter, ctxInfo) {
     // Adding discard to appease vulkan validation warning about loading uninitialized data on draw
     rtc->discard();
 
-if (false) {
     test_path(ctx, rtc.get(), create_path_0());
     test_path(ctx, rtc.get(), create_path_1());
     test_path(ctx, rtc.get(), create_path_2());
@@ -795,6 +794,5 @@ if (false) {
     test_path(ctx, rtc.get(), create_path_43(), SkMatrix(), AATypeFlags::kCoverage);
     test_path(ctx, rtc.get(), create_path_44(), SkMatrix(), AATypeFlags::kCoverage);
     test_path(ctx, rtc.get(), create_path_45(), SkMatrix(), AATypeFlags::kCoverage);
-}
     test_path(ctx, rtc.get(), create_path_46(), SkMatrix(), AATypeFlags::kCoverage);
 }
